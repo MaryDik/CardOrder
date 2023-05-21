@@ -10,7 +10,7 @@ public class CardOrderTest {
 
     @BeforeAll
     static void setUpAll() {
-        System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Professional\\Desktop\\AqaCode\\CardOrder\\driver\\win\\chromedriver.exe");
     }
 
     @BeforeEach
@@ -43,8 +43,6 @@ public class CardOrderTest {
         String expected = "  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
         Assertions.assertEquals(expected,actual);
-
-
     }
 
 }
